@@ -1,3 +1,11 @@
+""" 
+30/03/2025
+IA - ACT 2 Busqueda y sistemas basados en reglas
+Linda Carolina Zambrano Leon, Juan Sebastián Hernández Galindo, Jose Luis Rodriguez Castillo
+"""
+
+""" Sistema inteligente para encontrar la mejor ruta en un sistema de transporte masivo """
+
 class Ruta:
     """Clase que representa una conexión entre estaciones y su tiempo de viaje."""
     def __init__(self, origen, destino, tiempo):
