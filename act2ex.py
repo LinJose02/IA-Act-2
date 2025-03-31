@@ -84,8 +84,8 @@ sistema.agregar_ruta("G", "F", 8)
 sistema.agregar_ruta("E", "D", 12)
 sistema.agregar_ruta("G", "B", 6)
 
-# Buscar todas las rutas entre F y B
-todas_rutas = sistema.encontrar_rutas("A", "C")
+# Buscar todas las rutas entre A y B
+todas_rutas = sistema.encontrar_rutas("A", "B")
 if todas_rutas:
     todas_rutas.sort()  # Ordenar las rutas por tiempo total ascendente
     print("Rutas encontradas:")
@@ -95,10 +95,10 @@ else:
     estaciones_disponibles = {r.origen for r in sistema.rutas} | {r.destino for r in sistema.rutas}
     print(f"No se encontró una ruta válida. Estaciones disponibles: {', '.join(estaciones_disponibles)}")
 
-# Buscar la mejor ruta entre F y B aplicando reglas lógicas
-mejor_tiempo, mejor_ruta = sistema.encontrar_mejor_ruta("A", "C")
+# Buscar la mejor ruta entre A y B aplicando reglas lógicas
+mejor_tiempo, mejor_ruta = sistema.encontrar_mejor_ruta("A", "B")
 if mejor_ruta:
-    print(f"\nLa mejor ruta desde A hasta C es: {' -> '.join(mejor_ruta)} con un tiempo total de {mejor_tiempo} minutos")
+    print(f"\nLa mejor ruta desde A hasta B es: {' -> '.join(mejor_ruta)} con un tiempo total de {mejor_tiempo} minutos")
 else:
     estaciones_disponibles = {r.origen for r in sistema.rutas} | {r.destino for r in sistema.rutas}
     print(f"No se encontró una ruta válida. Estaciones disponibles: {', '.join(estaciones_disponibles)}")
